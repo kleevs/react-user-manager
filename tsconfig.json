@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "declaration": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "target": "es5",
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/vue/types"
+    ],
+    "paths": {
+      "react.extend": ["tools/react.extend"]
+    },
+    "lib": [
+      "es2016",
+      "dom"
+    ]
+  },
+  "exclude" : [
+    "./node_modules",
+    "./lib"
+  ]
+}
