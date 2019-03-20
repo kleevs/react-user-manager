@@ -15,7 +15,8 @@
       "node_modules/vue/types"
     ],
     "paths": {
-      "react.extend": ["tools/react.extend"]
+      "react.extend": ["tools/react.extend"],
+      "app": ["src/app"]
     },
     "lib": [
       "es2016",

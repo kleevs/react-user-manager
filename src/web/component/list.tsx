@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Component } from 'react.extend';
+import { IAppService } from '../../app/api/app.service';
 
-@Component<List>((list) =>
+export default (app: IAppService) =>
 <div> 
   <h1 className="title">Liste des utilisateurs</h1> 
   <hr/>
@@ -17,7 +17,7 @@ import { Component } from 'react.extend';
               </tr> 
           </thead> 
           <tbody> 
-          {list.list.map((_, i) => 
+          {app.list.map((_, i) => 
             <tr key={i.toString()}>
                 <td>{_.lastName}</td>
                 <td>{_.firstName}</td>
@@ -30,25 +30,4 @@ import { Component } from 'react.extend';
       </table> 
   </div>
 </div>
-)
-export default class List {
-    private _list: IUser[] = [{
-        lastName: "string",
-        firstName: "string",
-        birthdate: new Date(),
-        login: "string",
-        isAcif: false,
-    }];
-    constructor() {
-    }
-
-    get list() { return this._list; }
-}
-
-interface IUser {
-    lastName: string;
-    firstName: string;
-    birthdate: Date;
-    login: string;
-    isAcif: boolean;
-}
+;

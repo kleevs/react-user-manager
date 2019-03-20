@@ -10,9 +10,8 @@ for (var key in tsconfig.paths) {
 module.exports = {
   mode: 'development',
   entry: [
-    './src/extend.ts',
-    './src/index.tsx',
-    './src/content/less/main.less'
+    './src/web/index.tsx',
+    './src/web/content/less/main.less'
   ],
   output: {
     filename: 'bundle.js',
@@ -48,14 +47,6 @@ module.exports = {
     port: 8000,
     historyApiFallback: {
       index: 'index.html'
-    },
-    before: function(app) {
-      app.use(function (req, res, next) {
-        if (req.url.startsWith('/Images')) {
-          req.url = "/src/content/" + req.url;
-        }
-        next();
-      });  
     },
     after: function(app) {
       app.use(function (req, res, next) {
