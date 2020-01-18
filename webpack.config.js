@@ -24,6 +24,16 @@ module.exports = {
         loader: 'file-loader',
         options: { name: "style.css" },
       }, 'less-loader'] },
+      {
+        test: /\.(woff2?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }]
+      },
       { test: /\.html$/, use: 'raw-loader', exclude: /node_modules/ }
     ]
   },
@@ -42,7 +52,7 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, ''),
     compress: true,
     port: 8000,
     historyApiFallback: {

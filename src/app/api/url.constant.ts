@@ -1,5 +1,5 @@
-export const USERS = "";
-export const USER = (id: number) => "";
+export const USERS = "users";
+export const USER = (id: number) => `users/${id || ''}`;
 export const PING = "";
 export const SIGNIN = "";
 
