@@ -1,4 +1,4 @@
-import * as Urls from '../api/url.constant';
+import * as Urls from '../url.constant';
 
 export class AjaxService {
     get<T>(url: string): Promise<T> { 

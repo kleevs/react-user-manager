@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ListPage } from '../../app/page/list';
+import { ListPage } from '../../domain/page/list';
 import { useObserver } from "../tools/react.extend";
-import { ToolService } from "../service/tool.service";
+import ToolService from '../../domain/api/tool.service';
 import { attention } from "../tools/ui";
 
 export default (props: {page: ListPage, tool: ToolService}) => {

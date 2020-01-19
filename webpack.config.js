@@ -10,8 +10,8 @@ for (var key in tsconfig.paths) {
 module.exports = {
   mode: 'development',
   entry: [
-    './src/web/index.tsx',
-    './src/web/content/less/main.less'
+    './src/app/index.tsx',
+    './src/app/content/less/main.less'
   ],
   output: {
     filename: 'bundle.js',

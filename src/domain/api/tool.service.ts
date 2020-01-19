@@ -1,9 +1,9 @@
 import * as numeral from 'numeral';
 
-export class ToolService {
+export default class ToolService {
     toDateString(date: Date) {
         if (date && date instanceof Date) {
-            var day = numeral(date.getDay()).format("00");
+            var day = numeral(date.getDate()).format("00");
             var month = numeral(date.getMonth()+1).format("00");
             var year = numeral(date.getFullYear()).format("00");
             return `${day}/${month}/${year}`;
@@ -12,9 +12,11 @@ export class ToolService {
     }
 
     parseDate(str: string) {
-        var [date, month, year] = str.split("/");
-        if (+date && +month && +year && year.length === 4) {
-            return new Date(+year, +month-1, +date);
+        if (str && str.length === 10) {
+            var [date, month, year] = str.split("/");
+            if (+date && +month && +year && year.length === 4) {
+                return new Date(+year, +month-1, +date);
+            }
         }
         return null;
     }

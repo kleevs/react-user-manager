@@ -1,9 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
 import { attention } from '../tools/ui';
-import { DetailPage } from '../../app/page/detail';
+import { DetailPage } from '../../domain/page/detail';
 import { useObserver } from "../tools/react.extend";
-import { ToolService } from "../service/tool.service";
+import ToolService from '../../domain/api/tool.service';
 
 export default (props: {page: DetailPage, tool: ToolService}) => {
 useObserver(props.page);

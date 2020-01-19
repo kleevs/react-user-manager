@@ -16,7 +16,7 @@
     ],
     "paths": {
       "react.extend": ["tools/react.extend"],
-      "app": ["src/app"]
+      "app": ["src/domain"]
     },
     "lib": [
       "es2016",
